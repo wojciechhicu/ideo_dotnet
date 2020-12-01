@@ -1,0 +1,76 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="section col-3">
+            <label for="newNodeName">Nazwa węzła</label>
+            <input type="text" class="form-control" id="newNodeName">
+
+            <label for="selectParent">Wybierz rodzica</label>
+            <select class="form-control" id="selectParent" disabled>
+                <option id="optionSelectParent">Wybierz z listy</option>
+            </select>
+            <button type="submit" class="btn btn-primary col-12 down">Dodaj</button>
+        </div>
+        <div class="section col-3">
+            <label for="newName">Nowa nazwa dla węzła</label>
+            <input type="text" class="form-control" id="newName">
+
+            <label for="selectedNode">Wybierz węzeł do zmiany</label>
+            <select class="form-control" id="selectedNode" disabled>
+                <option id="optionNewName">Wybierz z listy</option>
+            </select>
+            <button type="submit" class="btn btn-primary col-12 down">Zmień nazwę</button>
+        </div>
+
+        <div class="section col-3">
+            <label for="nodeSelect">Nowy rodzic</label>
+            <select class="form-control" id="nodeSelect">
+                <option>LISTA</option>
+            </select>
+            <label for="newParent">Wybrany węzeł</label>
+            <select class="form-control" id="newParent" disabled>
+                <option id="optionNewParent">Wybierz z listy</option>
+            </select>
+            <button type="submit" class="btn btn-primary col-12 down">Zmień rodzica</button>
+        </div>
+        <div class="section col-3">
+            <label for="deleteNode">Usuń węzeł</label>
+            <select class="form-control" id="deleteNode" disabled>
+                <option id="optionDelete">Wybierz z listy</option>
+            </select>
+            <button type="submit" class="btn btn-primary col-12 down">Usuń</button>
+        </div>
+        <div class="content">
+            <ul id="myUL">
+                <li>
+                    <span class="caret selectItem" data-nodeId="0">Węzły</span>
+                    <ul class="nested">
+                        <li class="selectItem" data-nodeId="12">Water</li>
+                        <li class="selectItem" data-nodeId="13">Coffee</li>
+                        <li>
+                            <span class="caret">Tea</span>
+                            <ul class="nested">
+                                <li>Black Tea</li>
+                                <li>White Tea</li>
+                                <li>
+                                    <span class="caret">Green Tea</span>
+                                    <ul class="nested">
+                                        <li>Sencha</li>
+                                        <li>Gyokuro</li>
+                                        <li>Matcha</li>
+                                        <li>Pi Lo Chun</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
